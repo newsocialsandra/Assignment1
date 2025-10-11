@@ -23,6 +23,8 @@ form.addEventListener("submit", (event) => {
 
 /*
 
+// Create function in listener that creates h2 tag "Your new tinder bio"
+
 // Create function that places values from the object into p-tags and displays them in div
 
 // Add this function to the submit listener

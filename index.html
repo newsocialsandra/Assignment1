@@ -5,9 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tinder bio generator</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
 
+  <!--
+  The html file is being loaded from top to bottom by the web browser.
+  It contains the unstyled content of the webpage, such as headings, paragraphs and lists.
+  But before the browser loads the unstyled content, we want it to load the style sheet.
+  The style sheet tells the browser how the page should look. Typography, colors and all that jazz.
+  Placing the style sheet in the head tag makes sure that the user sees our cool design right from the start.
+  Below is the link to the css style sheet.
+   -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="description" content="">
   <meta property="og:title" content="">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
@@ -24,7 +33,7 @@
 
 <body>
 
-  <!-- Add your site or application content here -->
+  <!-- The application content starts here -->
   <h1>Generate your very own Tinder bio</h1>
   <p>Just tell me a bit about yourself and I will write you the perfect Tinder bio for free.</p>
   <p>It might also work for Hinge, but I can't vouch for it.</p>
@@ -52,6 +61,13 @@
   <!-- Result from js goes into this div -->
   <div id="result"></div>
 
+  <!--
+  Below is the js script, in the very end of the html body tag.
+  The js script is where we can add functionality to the webpage.
+  Such as, if the user clicks the "don't click me"-button, something terrible happens.
+  The js script is all the way down here because we want to make sure that the browser gets the html content before it runs the javascript file.
+  Otherwise the js file wouldn't be able to fetch or manipulate stuff in the html.
+   -->
   <script src="js/app.js"></script>
 
 </body>
