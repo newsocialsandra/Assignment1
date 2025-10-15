@@ -17,9 +17,19 @@ form.addEventListener("submit", (event) => {
       });
 
       // Console logging key value pairs from formObject
-      console.log(formObject);
-});
+      // Next step would be placing the sentences in variables
+      // And then displaying each variable in a p-tag in the html
 
+      console.log(formObject);
+      let pTag1 =`I’m ${formObject.lname}, ${formObject.fname} ${formObject.lname}. But you can call me Baby ${formObject.fname.slice(0,3)}. Yeah, I’m ${formObject.adjective.toLowerCase()} like that ;)`;
+      console.log(pTag1);
+      let pTag2 = `What am I looking for in a partner? Well, like most people, I’d like to meet someone who's a ${formObject.animal.toLowerCase()} in the streets and a ${formObject.occupation.toLowerCase()} in the sheets.`;
+      console.log(pTag2);
+      let pTag3 = `Maybe you could teach me ${formObject.subject.toLowerCase()}, maybe while wearing nothing but a ${formObject.fruit.toLowerCase()} shaped hat.`;
+      console.log(pTag3);
+      let pTag4 = `But let’s start small, huh? Hmu if you want to get a coffee or something.`;
+      console.log(pTag4);
+});
 
 /*
 
