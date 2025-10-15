@@ -6,7 +6,7 @@
 
 :root {
   --bg-color: #f8f6ff;
-  --accent-color: #b8c0ff;
+  --accent-color: #7983d2;
   --accent-color-2: #ffc8dd;
   --text-color: #2b2b2b;
   --button-color: #cdb4db;
@@ -47,24 +47,26 @@ main {
 h1 {
   font-weight: 600;
   color: var(--accent-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
+  text-align: left;
 }
 
 p {
   font-weight: 300;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 /* Form styling */
 form {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem; /* mindre mellanrum mellan element */
+  gap: 0 rem;
   margin: 2rem 0 1.5rem;
 }
 
 label {
-  font-weight: 400;
+  font-weight: 550;
   text-align: left;
   font-size: 0.9rem;
   color: #555;
@@ -76,7 +78,7 @@ input[type="text"] {
   border: 1px solid #ddd;
   border-radius: var(--radius);
   background: #fff;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
   width: 100%;
 }
@@ -115,7 +117,7 @@ button#reset:hover {
   background: #ffcad4;
 }
 
-/* Tar bort eventuell tom knappstil */
+
 button:empty {
   display: none;
 }
