@@ -19,22 +19,6 @@ function createPTag(stringIn) {
   resultDiv.appendChild(para);
 }
 
-// Creating a variable for the reset button
-const resetButton = document.getElementById("reset");
-
-// Creating a function that removes all values from form fields when pressing reset button
-
-const idList = ["fname", "lname", "adjective", "animal", "occupation", "subject", "fruit"];
-
-
-resetButton.addEventListener("click", () => {
-  for (let i = 0; i < idList.length; i++) {
-    resetValue = document.getElementById("lname");
-    resetValue.value = resetValue.innerHTML;
-  }
- resultDiv.innerHTML = "";
-})
-
 // Adding event listener for submit button
 form.addEventListener("submit", (event) => {
       // Preventing the form from reloading page
@@ -48,10 +32,7 @@ form.addEventListener("submit", (event) => {
       formData.forEach((value, key) => {
         formObject[key] = value;
       });
-
-      // Console logging key value pairs from formObject
-      // Next step would be placing the sentences in variables
-      // And then displaying each variable in a p-tag in the html
+      
 
       console.log(formObject);
       let pTag1 =`I’m ${formObject.lname}, ${formObject.fname} ${formObject.lname}. But you can call me Baby ${formObject.fname.slice(0,3)}. Yeah, I’m ${formObject.adjective.toLowerCase()} like that ;)`;
@@ -65,23 +46,20 @@ form.addEventListener("submit", (event) => {
       createPTag(pTag3);
       createPTag(pTag4);
 
-
 });
 
-/*
-
-// Create function in listener that creates h2 tag "Your new tinder bio"
-
-// Create function that places values from the object into p-tags and displays them in div
-
-// Add this function to the submit listener
-
-// Create variable for reset button
-
+// Creating a variable for the reset button
 const resetButton = document.getElementById("reset");
 
+// Creating an event listener that removes all values from form fields when pressing reset button
+// This was before I learned that I could do that with form.reset() hehe...
+// The reset button also clears the resultDiv from all content that was created
+const idList = ["fname", "lname", "adjective", "animal", "occupation", "subject", "fruit"];
 
-// Create listener for click on reset button, add functionality so that the form resets
-
-
-*/
+resetButton.addEventListener("click", () => {
+  for (let i = 0; i < idList.length; i++) {
+    resetValue = document.getElementById("lname");
+    resetValue.value = resetValue.innerHTML;
+  }
+ resultDiv.innerHTML = "";
+})
