@@ -32,6 +32,7 @@ resetButton.addEventListener("click", () => {
     resetValue = document.getElementById("lname");
     resetValue.value = resetValue.innerHTML;
   }
+ resultDiv.innerHTML = "";
 })
 
 // Adding event listener for submit button
