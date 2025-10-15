@@ -34,7 +34,6 @@ resetButton.addEventListener("click", () => {
   }
 })
 
-
 // Adding event listener for submit button
 form.addEventListener("submit", (event) => {
       // Preventing the form from reloading page
