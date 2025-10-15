@@ -26,20 +26,20 @@ form.addEventListener("submit", (event) => {
       // Creating new FormData object based on values from the form
       const formData = new FormData(form);
 
-      // Creating regular object and saving key values from formData in it
+      // Creating regular object and saving key value-pairs from formData in it
       const formObject = {};
 
       formData.forEach((value, key) => {
         formObject[key] = value;
       });
-      
 
-      console.log(formObject);
-      let pTag1 =`I’m ${formObject.lname}, ${formObject.fname} ${formObject.lname}. But you can call me Baby ${formObject.fname.slice(0,3)}. Yeah, I’m ${formObject.adjective.toLowerCase()} like that ;)`;
-      let pTag2 = `What am I looking for in a partner? Well, like most people, I’d like to meet someone who's a ${formObject.animal.toLowerCase()} in the streets and a ${formObject.occupation.toLowerCase()} in the sheets.`;
-      let pTag3 = `Maybe you could teach me ${formObject.subject.toLowerCase()}, maybe while wearing nothing but a ${formObject.fruit.toLowerCase()} shaped hat ;)`;
-      let pTag4 = `But let’s start small, huh? Hmu if you want to get a coffee or something.`;
+      // Creating variables for all the p-tags, using template literals to put in values from the form
+      const pTag1 =`I’m ${formObject.lname}, ${formObject.fname} ${formObject.lname}. But you can call me Baby ${formObject.fname.slice(0,3)}. Yeah, I’m ${formObject.adjective.toLowerCase()} like that ;)`;
+      const pTag2 = `What am I looking for in a partner? Well, like most people, I’d like to meet someone who's a ${formObject.animal.toLowerCase()} in the streets and a ${formObject.occupation.toLowerCase()} in the sheets.`;
+      const pTag3 = `Maybe you could teach me ${formObject.subject.toLowerCase()}, maybe while wearing nothing but a ${formObject.fruit.toLowerCase()} shaped hat ;)`;
+      const pTag4 = `But let’s start small, huh? Hmu if you want to get a coffee or something.`;
 
+      // Calling all the cool functions to generate tinder bio based on user input
       createH2Tag("Behold! Your new Tinder bio:");
       createPTag(pTag1);
       createPTag(pTag2);
